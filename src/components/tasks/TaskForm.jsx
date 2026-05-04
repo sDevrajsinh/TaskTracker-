@@ -75,6 +75,7 @@ export default function TaskForm({ user, editTask, onEditDone }) {
         await addTask({
           ...baseData,
           isDone: false,
+          finePaid: false,
           timeSpentSeconds: 0,
           isRunning: false,
           lastStarted: null,

@@ -52,3 +52,9 @@ export async function pauseTimer(id, timeSpentSeconds, lastStarted) {
     lastStarted: null,
   });
 }
+
+export async function markFinePaid(id) {
+  return updateDoc(doc(db, TASKS_COLLECTION, id), {
+    finePaid: true,
+  });
+}
